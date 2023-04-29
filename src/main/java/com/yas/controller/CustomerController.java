@@ -14,32 +14,27 @@ import com.yas.dao.CustomerRepository;
 import com.yas.dao.ServicesRepository;
 import com.yas.model.Customer;
 import com.yas.model.Services;
+import com.yas.service.CustomerService;
 
 @RestController
 public class CustomerController {
-	
+
 	@Autowired
-	CustomerRepository cr;
-	
-	@Autowired
-	ServicesRepository sr;
-	
+	CustomerService cs;
 
 	@PostMapping("/add-customer")
 	public Customer addCustomer(@RequestBody Customer custom) {
-		List<Services> listServe = sr.findAll();
-		custom.setServe(listServe);
-		return cr.save(custom);
+		return cs.addCustomer(custom);
 	}
-	
+
 	@GetMapping("/get-customer")
-	public List<Customer> getCustomer(){
-		return cr.findAll();
+	public List<Customer> getCustomer() {
+		return cs.getCustomer();
 	}
-	 
+
 	@PutMapping("/update-customer")
 	public Customer updateCustomer(@RequestBody Customer custom) {
-		return cr.save(custom);
+		return cs.updateCustomer(custom);
 	}
-	
+
 }
