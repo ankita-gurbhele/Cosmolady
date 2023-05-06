@@ -7,5 +7,5 @@ import com.yas.model.Customer;
 
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Integer> {
-	Customer findByAll(String firstName, String lastName, String address, long mobNo, String email);
+	public Customer findByFirstNameAndLastName(String firstName,String lastName);
 }

@@ -11,35 +11,33 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.yas.dao.HairColorRepository;
-import com.yas.dao.HairCutRepository;
-import com.yas.model.HairColor;
 import com.yas.model.HairCut;
+import com.yas.service.HairCutService;
 
 @RestController
 public class HairCutController {
 
 	@Autowired
-	HairCutRepository hc;
+	HairCutService haiCutService;
 	
 	@PostMapping("/add-cut")
 	public HairCut addCut(@RequestBody HairCut cut) {
-		return hc.save(cut);
+		return haiCutService.addCut(cut);
 	}
 	
 	@GetMapping("/get-cut")
 	public List<HairCut> getCut(){
-		return hc.findAll();
+		return haiCutService.getCut();
 	}
 	
 	@PutMapping("/update-cut")
 	public HairCut updateCut(@RequestBody HairCut cut) {
-		return hc.save(cut);
+		return haiCutService.updateCut(cut);
 	}
 	
 	@DeleteMapping("/delete-cut/{id}")
 	public void deleteCut(@PathVariable("id") int id) {
-		hc.deleteById(id);
+		haiCutService.deleteCut(id);;
 		
 	}
 }

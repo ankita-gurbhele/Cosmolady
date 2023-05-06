@@ -9,27 +9,27 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.yas.dao.MakeUpRepository;
 import com.yas.model.MakeUp;
+import com.yas.service.MakeUpService;
 
 @RestController
 public class MakeUpController {
 	
 	@Autowired
-	MakeUpRepository mur;
+	MakeUpService makeUpService;
 	
 	@PostMapping("/add-makeup")
 	public MakeUp addMakeUp(@RequestBody MakeUp makeup) {
-		return mur.save(makeup);
+		return makeUpService.addMakeUp(makeup);
 	}
 	
 	@GetMapping("/get-makeup")
 	public List<MakeUp> getMakeUp(){
-		return mur.findAll();
+		return makeUpService.getMakeUp();
 	}
 	
 	@PutMapping("/update-makeup")
 	public MakeUp updateMakeUp(@RequestBody MakeUp makeup) {
-		return mur.save(makeup);
+		return makeUpService.updateMakeUp(makeup);
 	}
 }
