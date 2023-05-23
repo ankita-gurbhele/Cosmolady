@@ -7,13 +7,21 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
+import javax.print.attribute.standard.Severity;
 
 import org.springframework.stereotype.Component;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Component
 public class HairCut {
 	
 	@Id
@@ -30,8 +38,5 @@ public class HairCut {
 	@ManyToOne
 	private Services service;
 	
-	public HairCut() {
-		
-	}
 
 }
