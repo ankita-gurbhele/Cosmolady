@@ -24,4 +24,24 @@ public class MakeUpService {
 	public MakeUp updateMakeUp(MakeUp makeup) {
 		return makeUpRepository.save(makeup);
 	}
+	
+/*	public int discount(int price) {
+		int discountPer=1;
+		if(makeUpRepository.findByprice()>2000) {
+			discountPer=5;
+		}else if(makeUpRepository.findByprice()>5000) {
+			discountPer=10;
+		}
+		else  {
+			System.out.println("there no discount  for this service");
+		}
+	int	result= (price*discountPer)/100;
+	return result;
+		
+	}*/
+	public String show(String makeUpName) {
+		return  makeUpRepository.getMake(makeUpName);
+	}
 }
+
+

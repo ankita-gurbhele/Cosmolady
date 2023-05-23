@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.yas.model.MakeUp;
@@ -31,5 +32,13 @@ public class MakeUpController {
 	@PutMapping("/update-makeup")
 	public MakeUp updateMakeUp(@RequestBody MakeUp makeup) {
 		return makeUpService.updateMakeUp(makeup);
+	}
+	/*@GetMapping("/discount")
+	public int discount(@RequestParam("price") int price ) {
+	return makeUpService.discount(price);
+}*/
+	@GetMapping("/show")
+	public String show(@RequestParam("makeUpName")String  makeUpName) {
+		return makeUpService.show(makeUpName);
 	}
 }
