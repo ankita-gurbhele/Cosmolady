@@ -9,18 +9,17 @@ import lombok.Data;
 
 @Entity
 @Data
-public class MakeUp {
+public class Center {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private String makeUpName;
-	private int price;
+	private String center;
+	private String branch;
+	private String address;
 	
-	
-	public MakeUp() {
+	Center(){
 		
 	}
-	
 	
 }

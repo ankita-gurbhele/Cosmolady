@@ -5,7 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import lombok.Data;
+
 @Entity
+@Data
 public class HairSpa {
 
 	@Id
@@ -13,29 +16,7 @@ public class HairSpa {
 	private int id;
 	private String spaName;
 	private int price;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getSpaName() {
-		return spaName;
-	}
-	public void setSpaName(String spaName) {
-		this.spaName = spaName;
-	}
-	public int getPrice() {
-		return price;
-	}
-	public void setPrice(int price) {
-		this.price = price;
-	}
-	public HairSpa(int id, String spaName, int price) {
-		this.id = id;
-		this.spaName = spaName;
-		this.price = price;
-	}
+	
 	public HairSpa() {
 		
 	}

@@ -1,11 +1,20 @@
 package com.yas.model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import org.springframework.stereotype.Component;
+
+import lombok.Data;
 
 @Entity
+@Data
+@Component
 public class Services {
 	
 	@Id
@@ -14,22 +23,6 @@ public class Services {
 	private String serviceName;
 	
 	
-	public String getServiceName() {
-		return serviceName;
-	}
-	public void setServiceName(String serviceName) {
-		this.serviceName = serviceName;
-	}
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public Services(int id, String serviceName) {
-		this.id = id;
-		this.serviceName = serviceName;
-	}
 	public Services() {
 		
 	}

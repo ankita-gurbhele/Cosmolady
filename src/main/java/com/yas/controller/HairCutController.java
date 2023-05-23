@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.yas.model.HairCut;
@@ -28,6 +29,11 @@ public class HairCutController {
 	@GetMapping("/get-cut")
 	public List<HairCut> getCut(){
 		return haiCutService.getCut();
+	}
+	
+	@GetMapping("/get-specialcut")
+	public String getCut(@RequestParam("cut") String haircutType){
+		return haiCutService.getCut(haircutType);
 	}
 	
 	@PutMapping("/update-cut")

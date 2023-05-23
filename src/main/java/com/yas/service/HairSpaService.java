@@ -3,10 +3,11 @@ package com.yas.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.yas.dao.HairSpaRepository;
 import com.yas.model.HairSpa;
-
+@Service
 public class HairSpaService {
 
 	@Autowired

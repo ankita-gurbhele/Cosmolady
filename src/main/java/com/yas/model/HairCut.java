@@ -1,11 +1,19 @@
 package com.yas.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
+
+import org.springframework.stereotype.Component;
+
+import lombok.Data;
 
 @Entity
+@Data
 public class HairCut {
 	
 	@Id
@@ -13,31 +21,17 @@ public class HairCut {
 	private int id;
 	private String haircutType;
 	private int price;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getHaircutType() {
-		return haircutType;
-	}
-	public void setHaircutType(String haircutType) {
-		this.haircutType = haircutType;
-	}
-	public int getPrice() {
-		return price;
-	}
-	public void setPrice(int price) {
-		this.price = price;
-	}
-	public HairCut(int id, String haircutType, int price) {
-		this.id = id;
-		this.haircutType = haircutType;
-		this.price = price;
-	}
+	@Column(length = 2000)
+	private String description;
+	
+	@Lob
+	private byte[] image;
+	
+	@ManyToOne
+	private Services service;
+	
 	public HairCut() {
 		
 	}
-	
+
 }
