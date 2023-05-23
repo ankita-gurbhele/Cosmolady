@@ -29,18 +29,12 @@ public class ServicesController {
 		return servicesService.getService();
 	}
 	
-<<<<<<< HEAD
-	/*
-	 * @GetMapping("/get-service") public List<String>
-	 * getService(@RequestParam("service") String serviceName){ return
-	 * servicesService.getService(serviceName); }
-	 */
-=======
+
 	@GetMapping("/get-service")
 	public List<String> getService(@RequestParam("service") String serviceName){
 		return null;
 	}
->>>>>>> eda66cac2277310c0f7bc607d745ac25f6fef27e
+
 	
 
 	
