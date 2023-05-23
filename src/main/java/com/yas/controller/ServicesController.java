@@ -30,8 +30,14 @@ public class ServicesController {
 	}
 	
 	@GetMapping("/get-service")
+
 	public List<HairCut> getService1 (){
 		return servicesService.getServiceById();
+	}
+
+	public List<String> getService(@RequestParam("service") String serviceName){
+		return null;
+
 	}
 	
 
