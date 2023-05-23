@@ -37,7 +37,7 @@ public class MakeUpController {
 	public int discount(@RequestParam("price") int price ) {
 	return makeUpService.discount(price);
 }*/
-	@GetMapping("/show")
+	@GetMapping("/saw")
 	public String show(@RequestParam("makeUpName")String  makeUpName) {
 		return makeUpService.show(makeUpName);
 	}
