@@ -1,6 +1,7 @@
 package com.yas.service;
 
 import java.io.Serializable;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,15 +21,23 @@ public class UsersService implements Serializable {
 	@Autowired
 	UsersRepository usr;
 	
+//	
+//	public Users addUsers(String fname, String lname, String email,String userName,String mobile) {
+//		Users us = Users.builder().fname(fname)
+//				                   .lname(lname)
+//			                       .email(email)
+//			                       .userName(userName)
+//			                       .mobile(mobile)
+//			                       .build();
+//		usr.save(us);
+//		return  us ;
+//	}
+//	
 	
-	public void addUsers(String fname, String lname, String email,String userName,String mobile) {
-		Users us = Users.builder().fname(fname)
-				                   .lname(lname)
-			                       .email(email)
-			                       .userName(userName)
-			                       .mobile(mobile)
-			                       .build();
-		usr.save(us);
+
+	public Users addUsers(Users user) {
+		
+		return usr.save(user);
 	}
 
 }

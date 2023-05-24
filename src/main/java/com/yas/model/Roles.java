@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
@@ -34,7 +35,7 @@ public class Roles implements Serializable {
 	private int roleId;
 	private String name;
 	
-	@OneToMany(cascade =CascadeType.ALL, mappedBy = "roles")
-	private List<RolesToPermissions> role_to_permissions; 
+	@ManyToMany(cascade =CascadeType.ALL)
+	private List<Permissions> permissions; 
 
 }

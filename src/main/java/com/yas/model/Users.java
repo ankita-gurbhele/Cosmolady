@@ -57,6 +57,7 @@ public class Users implements Serializable {
 	
 	@Column(name = "mobile" , nullable = false , unique = true)
 	@NotEmpty(message = "Mobile is required")
+	@Pattern(regexp = "\\d{10}" , message = "Invalid mobile number format. It should contain 10 digits.")
 	private String mobile;
 	
 	
