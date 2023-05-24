@@ -16,6 +16,7 @@ public class MakeUp {
 	private int id;
 	private String makeUpName;
 	private int price;
+	private int discountPer;
 	
 	
 	public MakeUp() {
