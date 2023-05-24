@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.print.attribute.standard.Severity;
+import javax.validation.constraints.NotEmpty;
 
 import org.springframework.stereotype.Component;
 
@@ -27,6 +28,8 @@ public class HairCut {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	@Column( nullable = false , unique = true)
+	@NotEmpty(message = "Haircut Type Is required")
 	private String haircutType;
 	private int price;
 	@Column(length = 2000)

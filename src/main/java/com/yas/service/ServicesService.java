@@ -43,7 +43,7 @@ public class ServicesService {
 	
 	public List<Services> getService(){
 		return serviceRepository.findAll();
-	}
+	} 
 	
 	public List<HairCut> getServiceById(){
 		return hairCutRepository.findAll();
