@@ -12,6 +12,8 @@ import com.yas.dao.MakeUpRepository;
 import com.yas.dao.ServicesRepository;
 import com.yas.model.HairCut;
 import com.yas.model.Services;
+
+import lombok.Builder;
 @Service
 public class ServicesService {
 
@@ -33,7 +35,7 @@ public class ServicesService {
 	@Autowired
 	Services service;
 	
-	List<String> notAvailable;
+	
 	
 	public Services addService(Services serve) {
 		return serviceRepository.save(serve);
@@ -41,9 +43,9 @@ public class ServicesService {
 	
 	public List<Services> getService(){
 		return serviceRepository.findAll();
-	}
+	} 
 	
-	public List<HairCut> getService(String serviceName){
+	public List<HairCut> getServiceById(){
 		return hairCutRepository.findAll();
 	}
 }

@@ -14,7 +14,6 @@ public interface HairCutRepository extends JpaRepository<HairCut, Integer>{
 	@Query(value = "SELECT haircut_type ht, price, description, image FROM hair_"
 			+ "cut WHERE haircut_type = :input", nativeQuery = true)
 	public String getCut(@Param("input") String haircutType);
-	
-	@Query(value = "SELECT haircut_type FROM hair_cut", nativeQuery = true)
-	public List<String> getAll();
+
+
 }
