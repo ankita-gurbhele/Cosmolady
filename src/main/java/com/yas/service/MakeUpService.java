@@ -42,6 +42,9 @@ public class MakeUpService {
 	public String show(String makeUpName) {
 		return  makeUpRepository.getMake(makeUpName);
 	}
+	public String expmake(int price) {
+		return  ""+makeUpRepository.expMake(price);
+	}
 }
 
 

@@ -41,4 +41,8 @@ public class MakeUpController {
 	public String show(@RequestParam("makeUpName")String  makeUpName) {
 		return makeUpService.show(makeUpName);
 	}
+	@GetMapping("/exp")
+	public String expMake(@RequestParam("pay")int price) {
+		return makeUpService.expmake(price);
+	}
 }

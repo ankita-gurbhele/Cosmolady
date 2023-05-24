@@ -20,7 +20,11 @@ public interface MakeUpRepository extends JpaRepository<MakeUp, Integer> {
 	public String getMake(@Param("input") String makeUpName);
 	
 
-public int findByprice(int price);
-	public int findByDiscountPer(int discountPer);
+MakeUp findByprice(int price);
+	MakeUp findByDiscountPer(int discountPer);
 	
+
+@Query(value = "SELECT make_up_name mn FROM make_up"
+		+ " WHERE price= :hi", nativeQuery = true)
+ public String expMake(@Param("hi") int price);
 }
