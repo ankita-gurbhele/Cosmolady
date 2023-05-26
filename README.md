@@ -123,7 +123,8 @@
                       "orders"
                       ]
 	
-# --------------------------------------------------------------------------------------------------------------------------#
+#------------------------------------------------------
+
 		
 # 2.0: Users 	
 		
@@ -147,11 +148,12 @@
                     }
      
 
-# ----------------------------------------------------------------------------------------------------------------------------#
+#------------------------------------------------------
 
 # 3.0 HairCut:
 	
   3.0.1
+  
   
         API     	: add-cut
 		Method  	: Post
@@ -159,7 +161,8 @@
 			{
 				"haircutType" : "V-cut",
 				"price"       : 100,
-				"description" : "The V-shaped haircut is a popular look, especially for long hair. Instead of having even tips, your hair is cut into layers 
+				"description" : "The V-shaped haircut is a popular look, especially for long hair.
+								Instead of having even tips, your hair is cut into layers 
 								on ends forming a “V”, which you can best show off when you let 
 								your hair down.It’s a refreshing way to add dimension to your hair.",
 				"image"       : null,
@@ -172,7 +175,8 @@
 				"id"          : 1,
 				"haircutType" : "V-cut",
 				"price"       : 100,
-				"description" : "The V-shaped haircut is a popular look, especially for long hair. Instead of having even tips, your hair is cut into layers 
+				"description" : "The V-shaped haircut is a popular look, especially for long hair. 
+								Instead of having even tips, your hair is cut into layers 
 								on ends forming a “V”, which you can best show off when you let 
 								your hair down.It’s a refreshing way to add dimension to your hair.",
 				"image"       : null,
@@ -183,6 +187,7 @@
 	        
   3.0.2 
   
+  
         API     : get-cut
 		Method  : Get
 		Response:
@@ -190,7 +195,8 @@
 				"id"          : 1,
 				"haircutType" : "V-cut",
 				"price"       : 100,
-				"description" : "The V-shaped haircut is a popular look, especially for long hair. Instead of having even tips, your hair is cut into layers 
+				"description" : "The V-shaped haircut is a popular look, especially for long hair. 
+								Instead of having even tips, your hair is cut into layers 
 								on ends forming a “V”, which you can best show off when you let 
 								your hair down.It’s a refreshing way to add dimension to your hair.",
 				"image"       : null,
@@ -201,6 +207,7 @@
 		
 		
   3.0.3
+  
   
 		API     	: get-specialcut
 		Method  	: Get
@@ -217,6 +224,7 @@
 			
   3.0.4
   
+  
         API     	: update-cut
 		Method  	: Put
 		RequestBody :
@@ -224,7 +232,8 @@
 				"id"          : 1,
 				"haircutType" : "V-cut",
 				"price"       : 200,
-				"description" : "The V-shaped haircut is a popular look, especially for long hair. Instead of having even tips, your hair is cut into layers 
+				"description" : "The V-shaped haircut is a popular look, especially for long hair. 
+								Instead of having even tips, your hair is cut into layers 
 								on ends forming a “V”, which you can best show off when you let 
 								your hair down.It’s a refreshing way to add dimension to your hair.",
 				"image"       : null,
@@ -237,7 +246,8 @@
 				"id"          : 1,
 				"haircutType" : "V-cut",
 				"price"       : 200,
-				"description" : "The V-shaped haircut is a popular look, especially for long hair. Instead of having even tips, your hair is cut into layers 
+				"description" : "The V-shaped haircut is a popular look, especially for long hair. 
+								Instead of having even tips, your hair is cut into layers 
 								on ends forming a “V”, which you can best show off when you let 
 								your hair down.It’s a refreshing way to add dimension to your hair.",
 				"image"       : null,
@@ -247,17 +257,20 @@
 			
   3.0.5 
   
+  
         API     	: delete-cut
 		Method  	: DELETE
 		PathVariable: id
 			
 		
 	
-#------------------------------------------------------------------------------------------------------------------------------#
+#------------------------------------------------------
 
 # 4.0 Center:
 	
   4.0.1
+  
+  
         API     	: add-center
 		Method  	: Post
 		RequestBody :
@@ -277,6 +290,8 @@
 			
 			
   4.0.2 
+  
+  
         API     	: get-center
 		Method  	: Get	
 		Response:
@@ -289,6 +304,8 @@
 			
 			
   4.0.3 
+  
+  
         API     	: get-branch
 		Method  	: Get	
 		RequestParam: center
@@ -300,6 +317,8 @@
 			
 			
   4.0.4
+  
+  
         API     	: change-center
 		Method  	: Put
 		RequestBody :
@@ -319,11 +338,14 @@
 			}
 			
 			
-#------------------------------------------------------------------------------------------------------------------------------#			
+#------------------------------------------------------
+
 
 # 5.0 HairColor:
 	
   5.0.1 
+  
+  
         API     	: add-color
 		Method  	: Post
 		RequestBody :
@@ -342,6 +364,8 @@
 			
      	
   5.0.2 
+  
+  
         API     	: get-color
 		Method  	: Get
 		Response    :
@@ -353,6 +377,8 @@
      	
 	
   5.0.3 
+  
+  
         API     	: update-color
 		Method  	: Put
 		RequestBody :
@@ -371,7 +397,8 @@
              
 
 
-#----------------------------------------------------------------------------------------------------------------------------#
+#------------------------------------------------------
+
 
 #6.0 MakeUp:
 
@@ -435,12 +462,14 @@
 		RequestParam:price
 		Response	:no makeup look
 
- #------------------------------------------------------------------------------------------------------------------------------------------------    
+#------------------------------------------------------ 
 
 
 #7.0 HairSpa:-
 
 	1.0
+	
+	
      	API			:add-spa
 		Method		:Post
 		RequestBody	:
@@ -456,6 +485,8 @@
             }
 
 	2.0
+	
+	
      	API		:get-spa
 		Method	:Get
 		Response:
@@ -467,6 +498,8 @@
                 
 	
 	3.0
+	
+	
      	API			:update-spa
 		Method		:Put
 		RequestBody	:
@@ -482,8 +515,9 @@
                 "price"  :350
             }
 
- #-----------------------------------------------------------------------------------------------------------------------------------------------------------        
-                   
+#------------------------------------------------------      
+
+             
 
 ## Contributing
 
