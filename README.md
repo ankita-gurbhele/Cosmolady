@@ -151,7 +151,9 @@
 
 # 3.0 HairCut:
 	
-  3.0.1 API     	: add-cut
+  3.0.1
+  
+        API     	: add-cut
 		Method  	: Post
 		RequestBody :
 			{
@@ -163,6 +165,7 @@
 				"image"       : null,
 				"service"     : null
 			}
+			
 			
 		Response:
 			{
@@ -178,7 +181,9 @@
      
 	   
 	        
-  3.0.2 API     : get-cut
+  3.0.2 
+  
+        API     : get-cut
 		Method  : Get
 		Response:
 			{
@@ -193,7 +198,11 @@
 			}
 			
 			
-  3.0.3 API     	: get-specialcut
+		
+		
+  3.0.3
+  
+		API     	: get-specialcut
 		Method  	: Get
 		RequestParam: cut
 		Response	:
@@ -205,7 +214,10 @@
 			
 			
 			
-  3.0.4 API     	: update-cut
+			
+  3.0.4
+  
+        API     	: update-cut
 		Method  	: Put
 		RequestBody :
 			{
@@ -218,6 +230,7 @@
 				"image"       : null,
 				"service"     : null
 			}
+			
 			
 		Response:
 			{
@@ -232,7 +245,9 @@
 			}
 			
 			
-  3.0.5 API     	: delete-cut
+  3.0.5 
+  
+        API     	: delete-cut
 		Method  	: DELETE
 		PathVariable: id
 			
@@ -242,7 +257,8 @@
 
 # 4.0 Center:
 	
-  4.0.1 API     	: add-center
+  4.0.1
+        API     	: add-center
 		Method  	: Post
 		RequestBody :
 			{
@@ -260,7 +276,8 @@
 			}
 			
 			
-  4.0.2 API     	: get-center
+  4.0.2 
+        API     	: get-center
 		Method  	: Get	
 		Response:
 			{
@@ -271,7 +288,8 @@
 			}
 			
 			
-  4.0.3 API     	: get-branch
+  4.0.3 
+        API     	: get-branch
 		Method  	: Get	
 		RequestParam: center
 		Response:
@@ -281,7 +299,8 @@
 			]
 			
 			
-  4.0.4 API     	: change-center
+  4.0.4
+        API     	: change-center
 		Method  	: Put
 		RequestBody :
 			{
@@ -304,7 +323,8 @@
 
 # 5.0 HairColor:
 	
-  5.0.1 API     	: add-color
+  5.0.1 
+        API     	: add-color
 		Method  	: Post
 		RequestBody :
 			{
@@ -321,7 +341,8 @@
 			
 			
      	
-  5.0.2 API     	: get-color
+  5.0.2 
+        API     	: get-color
 		Method  	: Get
 		Response    :
 			{
@@ -331,7 +352,8 @@
 			}
      	
 	
-  5.0.3 API     	: update-color
+  5.0.3 
+        API     	: update-color
 		Method  	: Put
 		RequestBody :
 			{
@@ -353,7 +375,8 @@
 
 #6.0 MakeUp:
 
-    1.0 API			:add-makeup
+    1.0 
+	    API			:add-makeup
 		Method		:Post
 		RequestBody :
             {
@@ -370,7 +393,8 @@
             }
 
 
-	2.0	API		:get-makeup
+	2.0	
+	    API		:get-makeup
 		Method	:Get
 		Response:     
             {
@@ -380,7 +404,8 @@
 				"discountPer"	:3
             }
 
-    3.0 API			:update-makeup
+    3.0 
+	    API			:update-makeup
 		Method		:Put
 		RequestBody :
             {
@@ -397,13 +422,15 @@
 				"discountPer"	:3
             }
 
-	4.0	API			:saw
+	4.0
+	    API			:saw
 		Method		:Get
 		RequestParam:MakeUpName
 		Response	:no makeup look,500,4 
 		
 	
-	5.0	API			:exp
+	5.0	
+	    API			:exp
 		Method		:Get
 		RequestParam:price
 		Response	:no makeup look
@@ -413,7 +440,8 @@
 
 #7.0 HairSpa:-
 
-	1.0	API			:add-spa
+	1.0
+     	API			:add-spa
 		Method		:Post
 		RequestBody	:
 			{
@@ -427,7 +455,8 @@
                 "price"  :300
             }
 
-	2.0	API		:get-spa
+	2.0
+     	API		:get-spa
 		Method	:Get
 		Response:
 			{
@@ -437,7 +466,8 @@
             }
                 
 	
-	3.0	API			:update-spa
+	3.0
+     	API			:update-spa
 		Method		:Put
 		RequestBody	:
 			{
