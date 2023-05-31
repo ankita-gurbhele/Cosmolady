@@ -24,14 +24,7 @@ public class RolesService implements Serializable {
 
 	public Roles addRoleWithPermissons(Roles role) {
 
-//		Roles role = Roles.builder().name("Admin").build();
-//		Roles role1 = Roles.builder().name("Sales").build();
-//		Roles role2 = Roles.builder().name("Editor").build();
-//		Roles role3 = Roles.builder().name("Shipper").build();
-//		rp.save(role);
-//		rp.save(role1);
-//		rp.save(role2);
-//		rp.save(role3);
+
 		Roles roles = new Roles();
 		roles.setName(role.getName());
 

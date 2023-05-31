@@ -21,20 +21,7 @@ public class UsersService implements Serializable {
 	@Autowired
 	UsersRepository usr;
 	
-//	
-//	public Users addUsers(String fname, String lname, String email,String userName,String mobile) {
-//		Users us = Users.builder().fname(fname)
-//				                   .lname(lname)
-//			                       .email(email)
-//			                       .userName(userName)
-//			                       .mobile(mobile)
-//			                       .build();
-//		usr.save(us);
-//		return  us ;
-//	}
-//	
 	
-
 	public Users addUsers(Users user) {
 		
 		return usr.save(user);
