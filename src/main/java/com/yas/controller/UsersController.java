@@ -23,19 +23,11 @@ public class UsersController implements Serializable {
 
 	@Autowired
 	UsersService service;
-	
+
 	@Autowired
 	RolesService rs;
 
-//	@PostMapping("/addUsers")
-//	public Users addUser(String fname, String lname, String email, String userName, String mobile) {
-//        rs.add();
-//		Users us = service.addUsers(fname, lname, email, userName, mobile);
-//		return us;
-//
-//	}
-	
-	@PostMapping("/addUsers")
+	@PostMapping("/addusers")
 	public Users addUser(@RequestBody Users user) {
 		Users us = service.addUsers(user);
 		return us;
